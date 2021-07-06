@@ -2,7 +2,9 @@
 Problema da Galeria de Arte
 
 TP1 - Algoritmos 2
+
 Arthur Mota
+
 Universidade Federal de Minas Gerais (UFMG)
 
 1. Modelagem Computacional:
@@ -19,7 +21,15 @@ Além das listas necessárias para o armazenamento dos vértices do polígono, t
 
 2.2. Algoritmos:
 
+Começamos enviando os vértices do polígono (entrada) para a função triangulacao(). É nela que o algoritmo de Ear Clipping será utilizado. A cada vértice do polígono serão criados vetores entre o vértice atual, o anterior e o próximo para que eles sejam avaliados quanto ao produto vetorial. Caso o valor do produto vetorial for negativo, o ângulo entre os vetores é menor que 180 graus, logo podemos considerar esse triângulo formado pelos três vértices como uma orelha. Agora, verificamos se existe um vértice dentro desse triângulo na função verticeNoTriangulo(). Para cada vértice do polígono, criamos um vetor entre esse ponto e cada ponto do triângulo analisado no momento. Usamos novamente o produto vetorial para verificar se o vértice está a esquerda de todas as arestas do triângulo. Se isso não for confirmado para todos os vértices, então o triângulo atual é uma orelha e o vértice atual deve ser removido do polígono. Além disso, uma lista com as diagonais e outra com os triângulos que formam a triangulação serão criadas.
+
+
+
 3. Análise de Complexidade de Tempo:
 
 Temos três algoritmos do código que influenciam mais em sua complexidade de tempo. Vamos definir que n é o número de vértices do polígono. Já é conhecido que o algoritmo de Ear Clipping possui complexidade de tempo O(n^2). Para a coloração, temos a criação do grafo dual e o algoritmo da Busca em Profundidade. Os dois laços da contrução do grafo possuem tamanhos n - 3 (npúmero de diagonais) e n - 2 (número de triângulos), necessitando assim de tempo O(n^2). É sabido também que a Busca em Profundidade possui complexidade O(n).
 Dessa forma, o algoritmo do problema possui complexidade de tempo O(n^2).
+
+4. Casos teste:
+
+Testes disponibilizados (correção no polígono points2 em que o vértice (0,0) deve aparecer apenas uma vez) + polígono = (0,0), (10,7), (12,3), (20,8), (13,17), (10, 12), (12, 14), (14,9), (8,10), (6,14), (10,15), (7,17), (0,16), (1,13), (3,15), (5,8), (-2,9), (5,5).
