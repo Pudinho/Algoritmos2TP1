@@ -36,6 +36,6 @@ Dessa forma, o algoritmo do problema possui complexidade de tempo O(n^2).
 
 4. Casos teste e entrada/saída:
 
-Testes disponibilizados (correção no polígono points2 em que o vértice (0,0) deve aparecer apenas uma vez) + polígono = (0,0), (10,7), (12,3), (20,8), (13,17), (10, 12), (12, 14), (14,9), (8,10), (6,14), (10,15), (7,17), (0,16), (1,13), (3,15), (5,8), (-2,9), (5,5).
+Testes disponibilizados (correção nos casos em que algum ponto se repete na entrada) + polígono = (0,0), (10,7), (12,3), (20,8), (13,17), (10, 12), (12, 14), (14,9), (8,10), (6,14), (10,15), (7,17), (0,16), (1,13), (3,15), (5,8), (-2,9), (5,5).
 
-A entrada são os vértices do polígono no formato lista em que cada ponto é uma tupla (x,y). É bom notar que existe uma aresta entre dois vértices sse eles são vizinhos na lista. Para a saída teremos o polígono plotada com coloração e triangulação, além dos vértices em que as câmeras devem ser instaladas.
+A entrada são os vértices do polígono no formato lista em que cada ponto é uma tupla (x,y). Obs: não se deve repetir NENHUM ponto na entrada, o último vértice já é automaticamente associado com o primeiro. É bom notar que existe uma aresta entre dois vértices sse eles são vizinhos na lista. Para a saída teremos o polígono plotada com coloração e triangulação, além dos vértices em que as câmeras devem ser instaladas.
